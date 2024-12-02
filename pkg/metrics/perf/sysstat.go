@@ -236,10 +236,12 @@ while true
 	retval=$?
 	if [[ $retval -ne 0 ]]; then
 		echo "%s"
+		%s
 		exit 0
 	fi
 	if [[ $completions -ne 0 ]] && [[ $i -eq $completions ]]; then
 		echo "%s"
+		%s
 		exit 0
 	fi
 	sleep %d
@@ -259,7 +261,9 @@ done
 		metadata.Separator,
 		showPIDS,
 		metadata.CollectionEnd,
+		interactive,
 		metadata.CollectionEnd,
+		interactive,
 		m.rate,
 	)
 	postBlock := fmt.Sprintf("\n%s\n", interactive)
